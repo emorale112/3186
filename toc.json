@@ -1,0 +1,18 @@
+{
+    "items": [
+        {
+            "type": "divider",
+            "title": "Getting Started"
+        },
+        {
+            "type": "item",
+            "title": "Authentication",
+            "uri": "docs/Authentication.md"
+        },
+        {
+            "type": "item",
+            "title": "Purchase Order Management",
+            "uri": "specifications/public.json"
+        }
+    ]
+}
