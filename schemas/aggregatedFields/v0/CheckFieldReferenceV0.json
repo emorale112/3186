@@ -1,0 +1,13 @@
+{
+    "oneOf": [
+        {
+            "$ref": "./PurchaseOrderLineItemStandardNumberFieldReferenceV0.json"
+        },
+        {
+            "$ref": "./PurchaseOrderLineItemCustomNumberFieldReferenceV0.json"
+        }
+    ],
+    "discriminator": {
+        "propertyName": "type"
+    }
+}

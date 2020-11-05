@@ -1,0 +1,5 @@
+{
+    "type": "string",
+    "description": "The aggregated quality assurance approval status of the purchase order.",
+    "enum": ["pending", "passed", "failed", "notApplicable", "warning"]
+}

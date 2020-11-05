@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "Document id.",
+            "type": "string"
+        },
+        "documentType": {
+            "$ref": "./DocumentType.json"
+        },
+        "createdAt": {
+            "description": "Generated on insertion (current date).",
+            "type": "string",
+            "format": "date-time"
+        },
+        "name": {
+            "description": "Name of the uploaded file.",
+            "type": "string"
+        },
+        "mimeType": {
+            "type": "string",
+            "description": "MIME type of the document."
+        },
+        "userID": {
+            "type": "string",
+            "description": "User ID of the user who uploaded the document."
+        },
+        "user": {
+            "$ref": "./User.json"
+        },
+        "customerID": {
+            "type": "string",
+            "description": "Customer ID of the user who uploaded the document."
+        },
+        "customer": {
+            "$ref": "./Customer.json"
+        },
+        "purchaseOrderID": {
+            "type": "string",
+            "description": "ID of the purchase order this document belongs to"
+        },
+        "meta": {
+            "$ref": "./Metadata.json"
+        }
+    },
+    "required": [
+        "id",
+        "purchaseOrderId",
+        "purchaseOrderID",
+        "documentType",
+        "createdAt",
+        "name",
+        "mimeType",
+        "userID",
+        "user",
+        "customerID",
+        "customer"
+    ]
+}

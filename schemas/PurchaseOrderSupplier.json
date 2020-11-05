@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "customerReference": {
+            "type": "string",
+            "description": "The reference/identifier of the supplier in the buyer's system.",
+            "maxLength": 5000
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the supplier in the buyer's system.",
+            "maxLength": 5000
+        }
+    },
+    "required": ["name"]
+}

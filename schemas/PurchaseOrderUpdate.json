@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "buyerReference": {
+            "$ref": "./PurchaseOrder.json#/properties/buyerReference"
+        },
+        "lineItemChanges": {
+            "type": "array",
+            "items": {
+                "$ref": "./PurchaseOrderLineItemChange.json"
+            }
+        },
+        "type": {
+            "type": "string",
+            "enum": ["PurchaseOrderUpdate"]
+        }
+    },
+    "required": ["buyerReference", "lineItemChanges", "type"]
+}

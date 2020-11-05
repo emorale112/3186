@@ -1,0 +1,15 @@
+{
+    "properties": {
+        "currency": {
+            "$ref": "./CurrencyCode.json",
+            "description": "Currency of the money"
+        },
+        "amount": {
+            "type": "number",
+            "description": "The amount of money per unit without VAT"
+        }
+    },
+    "required": ["currency", "amount"],
+    "type": "object",
+    "description": "A monetary value with an amount and a currency"
+}

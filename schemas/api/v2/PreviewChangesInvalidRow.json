@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "row": {
+            "type": "number",
+            "description": "The row in the uploaded file where the issues occurred."
+        },
+        "buyerReference": {
+            "type": "string",
+            "description": "The buyer reference for the purchase order described in the row in the uploaded file if available."
+        },
+        "cells": {
+            "type": "array",
+            "items": {
+                "properties": {
+                    "columnIdentifier": {
+                        "type": "string",
+                        "description": "Unique identifer for the column. This can be used to differentiate between custom fields with the same display name.",
+                        "example": "customerReference"
+                    },
+                    "columnHeader": {
+                        "type": "string",
+                        "description": "The display name of the field as specified in the spreadsheet header.",
+                        "example": "PO ID*"
+                    },
+                    "value": {
+                        "description": "The value of the cell.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "boolean"
+                            }
+                        ]
+                    },
+                    "issue": {
+                        "type": "string",
+                        "description": "The issue with the cell.",
+                        "example": "Required"
+                    }
+                },
+                "required": ["columnIdentifier", "columnHeader"]
+            }
+        }
+    },
+    "required": ["row", "cells"]
+}

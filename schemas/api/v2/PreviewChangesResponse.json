@@ -1,0 +1,6 @@
+{
+    "oneOf": [
+        { "$ref": "./PreviewChangesInvalidRowsResponse.json" },
+        { "$ref": "./PreviewChangesChangedRowsResponse.json" }
+    ]
+}

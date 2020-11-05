@@ -1,0 +1,120 @@
+{
+    "type": "object",
+    "properties": {
+        "purchaseOrderID": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "ID of the purchase order the line item belongs to."
+        },
+        "buyerReference": {
+            "$ref": "../PurchaseOrder.json#/properties/buyerReference"
+        },
+        "lineItemNumber": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/lineItemNumber"
+        },
+        "bookedAt": {
+            "description": "The time at which this line item was assigned to this shipment.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "incoterm": {
+            "$ref": "../ISOIncotermCode.json"
+        },
+        "transportMode": {
+            "$ref": "../TransportMode.json"
+        },
+        "transportType": {
+            "$ref": "../TransportType.json"
+        },
+        "plannedCargoReadyDate": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/plannedCargoReadyDate"
+        },
+        "plannedDeliveryDate": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/plannedDeliveryDate"
+        },
+        "supplierConfirmedCargoReadyDate": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/confirmedCargoReadyDate"
+        },
+        "actualCargoReadyDate": {
+            "$ref": "../api/v2/TrackingEvent.json"
+        },
+        "confirmedCargoReadyDate": {
+            "$ref": "../api/v2/TrackingEvent.json"
+        },
+        "etdOrigin": {
+            "$ref": "../api/v2/TrackingEvent.json"
+        },
+        "atdOrigin": {
+            "$ref": "../api/v2/TrackingEvent.json"
+        },
+        "etaDestination": {
+            "$ref": "../api/v2/TrackingEvent.json"
+        },
+        "ataDestination": {
+            "$ref": "../api/v2/TrackingEvent.json"
+        },
+        "estimatedDeliveryDate": {
+            "$ref": "../api/v2/TrackingEvent.json"
+        },
+        "actualDeliveryDate": {
+            "$ref": "../api/v2/TrackingEvent.json"
+        },
+        "originAddress": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/originAddress"
+        },
+        "deliveryAddress": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/deliveryAddress"
+        },
+        "portOfLoading": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/portOfLoading"
+        },
+        "volumeCBM": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/volumeCBM"
+        },
+        "weightKGM": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/weightKGM"
+        },
+        "packagedVolumeCBM": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/packagedVolumeCBM"
+        },
+        "packagedWeightKGM": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/packagedWeightKGM"
+        },
+        "orderedQuantity": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/orderedQuantity"
+        },
+        "manufacturedQuantity": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/manufacturedQuantity"
+        },
+        "buyerProductID": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/buyerProductID"
+        },
+        "productSKU": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/productSKU"
+        },
+        "productDescription": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/productDescription"
+        },
+        "hsCodes": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/hsCodes"
+        },
+        "quantity": {
+            "$ref": "../PurchaseOrderLineItem.json#/properties/shippedQuantity"
+        }
+    },
+    "required": [
+        "purchaseOrderID",
+        "buyerReference",
+        "lineItemNumber",
+        "bookedAt",
+        "incoterm",
+        "transportMode",
+        "portOfLoading",
+        "productSKU",
+        "orderedQuantity",
+        "buyerProductID",
+        "productDescription",
+        "hsCodes",
+        "quantity"
+    ]
+}

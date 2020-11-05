@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "description": "A transport related event. If set to null, the tracking event will be removed.",
+    "properties": {
+        "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+        }
+    },
+    "required": ["timestamp"]
+}

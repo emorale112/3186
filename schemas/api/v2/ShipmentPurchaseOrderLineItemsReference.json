@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "description": "Reference to all PO line items with particular shipmentID.",
+    "properties": {
+        "shipmentID": {
+            "type": "string",
+            "description": "Identifier for the shipment."
+        }
+    },
+    "required": ["shipmentID"],
+    "additionalProperties": false
+}

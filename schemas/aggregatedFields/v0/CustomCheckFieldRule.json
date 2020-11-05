@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "reference": {
+            "$ref": "../../Approval.json"
+        },
+        "value": {
+            "$ref": "./Check.json"
+        }
+    },
+    "required": ["reference", "value"]
+}

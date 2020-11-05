@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "description": "Reference to purchase order line item by id of the purchase order.",
+    "properties": {
+        "lineItemNumber": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/lineItemNumber"
+        },
+        "purchaseOrderID": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Identifier for the purchase order."
+        }
+    },
+    "required": ["lineItemNumber", "purchaseOrderID"],
+    "additionalProperties": false
+}

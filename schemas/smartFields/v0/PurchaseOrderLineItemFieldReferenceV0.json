@@ -1,0 +1,10 @@
+{
+    "oneOf": [
+        {
+            "$ref": "./PurchaseOrderLineItemStandardFieldReferenceV0.json"
+        },
+        {
+            "$ref": "./PurchaseOrderLineItemCustomFieldReferenceV0.json"
+        }
+    ]
+}

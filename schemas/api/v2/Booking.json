@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "FortoX ID of the booking",
+            "maxLength": 5000,
+            "minLength": 1
+        },
+        "buyerID": {
+            "$ref": "../../PurchaseOrder.json#/properties/buyerID"
+        },
+        "lineItems": {
+            "type": "array",
+            "items": {
+                "$ref": "./BookingLineItem.json"
+            }
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation date of the booking"
+        },
+        "seller": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "maxLength": 5000
+                }
+            },
+            "required": ["name"]
+        }
+    },
+    "required": ["id", "buyerID", "lineItems", "createdAt", "seller"]
+}

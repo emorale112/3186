@@ -1,0 +1,11 @@
+{
+    "type": "object",
+    "description": "A transport related event.",
+    "properties": {
+        "timestamp": {
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": ["timestamp"]
+}

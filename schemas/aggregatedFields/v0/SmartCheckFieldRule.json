@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "reference": {
+            "$ref": "../../smartFields/v0/SmartFieldValueV0.json"
+        },
+        "value": {
+            "$ref": "./Check.json"
+        }
+    },
+    "required": ["reference", "value"]
+}

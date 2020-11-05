@@ -1,0 +1,13 @@
+{
+    "description": "The customer aggregated fields",
+    "type": "object",
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "$ref": "./AggregatedFieldV0.json"
+            }
+        }
+    },
+    "required": ["items"]
+}

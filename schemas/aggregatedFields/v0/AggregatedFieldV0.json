@@ -1,0 +1,16 @@
+{
+    "oneOf": [
+        {
+            "$ref": "./SumFieldV0.json"
+        },
+        {
+            "$ref": "./SmartCheckFieldV0.json"
+        },
+        {
+            "$ref": "./CustomCheckFieldV0.json"
+        }
+    ],
+    "discriminator": {
+        "propertyName": "type"
+    }
+}

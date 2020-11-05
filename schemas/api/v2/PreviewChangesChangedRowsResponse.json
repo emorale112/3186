@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "rowsToCreate": {
+            "$ref": "./PurchaseOrderPreviewCreateChanges.json"
+        },
+        "rowsToUpdate": {
+            "$ref": "./PurchaseOrderPreviewUpdateChanges.json"
+        },
+        "rowsToDelete": {
+            "$ref": "./PurchaseOrderPreviewDeleteChanges.json"
+        }
+    },
+    "required": ["rowsToDelete", "rowsToUpdate", "rowsToCreate"]
+}

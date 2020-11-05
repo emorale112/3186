@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "description": "Add lineItems to an existing booking",
+    "properties": {
+        "lineItems": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "reference": {
+                        "$ref": "./InternalPurchaseOrderLineItemReference.json"
+                    }
+                },
+                "required": ["reference"]
+            }
+        }
+    },
+    "required": ["lineItems"]
+}

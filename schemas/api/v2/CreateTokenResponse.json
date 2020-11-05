@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "token": {
+            "type": "string",
+            "description": "The created token."
+        },
+        "expiresAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The expiry time of the token."
+        }
+    },
+    "required": ["token", "expiresAt"]
+}

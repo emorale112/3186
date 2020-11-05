@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "lineItems": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "reference": {
+                        "$ref": "./InternalPurchaseOrderLineItemReference.json"
+                    }
+                },
+                "required": ["reference"]
+            }
+        }
+    },
+    "required": ["lineItems"]
+}

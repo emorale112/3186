@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "Changes for a purchase order.",
+    "properties": {
+        "customFields": {
+            "$ref": "./CustomerCustomFields.json"
+        },
+        "supplier": {
+            "$ref": "./PurchaseOrderSupplier.json"
+        },
+        "orderedAt": {
+            "$ref": "./PurchaseOrder.json#/properties/orderedAt"
+        },
+        "lineItems": {
+            "type": "array",
+            "items": {
+                "$ref": "./PurchaseOrderLineItemUpdateChanges.json"
+            }
+        }
+    }
+}

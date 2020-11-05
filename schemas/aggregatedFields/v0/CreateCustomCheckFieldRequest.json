@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "displayName": {
+            "type": "string",
+            "maxLength": 5000
+        },
+        "field": {
+            "$ref": "./CustomCheckFieldReferenceV0.json"
+        },
+        "type": {
+            "$ref": "./CustomCheckFieldType.json"
+        },
+        "rules": {
+            "type": "array",
+            "items": {
+                "$ref": "./CustomCheckFieldRule.json"
+            }
+        }
+    },
+    "required": ["displayName", "field", "type", "rules"]
+}

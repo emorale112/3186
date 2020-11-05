@@ -1,0 +1,19 @@
+{
+    "oneOf": [
+        {
+            "$ref": "./SumFieldCompleteValue.json"
+        },
+        {
+            "$ref": "./SumFieldPartialValue.json"
+        },
+        {
+            "$ref": "./SumFieldNotApplicableValue.json"
+        },
+        {
+            "$ref": "./CheckFieldValue.json"
+        }
+    ],
+    "discriminator": {
+        "propertyName": "type"
+    }
+}

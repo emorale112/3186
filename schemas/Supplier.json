@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "description": "A supplier is a company selling goods to a buyer.",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The ID"
+        },
+        "name": {
+            "type": "string",
+            "description": "The name of the seller."
+        },
+        "buyerID": {
+            "$ref": "./PurchaseOrder.json#/properties/buyerID"
+        },
+        "sellerID": {
+            "type": "string",
+            "description": "The sellers customer ID on the platform."
+        },
+        "buyerReference": {
+            "type": "string",
+            "description": "The buyers internal reference for the supplier."
+        },
+        "onboardingStatus": {
+            "type": "string",
+            "enum": ["onboarded", "notOnboarded"],
+            "description": "Describes the progress in the onboarding workflow. A newly created supplier will be not onboarded. The buyer withh send the invitation link to the supplier to collaborate on the platform. Once the seller has accepted the invitation and is ready to collaborate, the status will be onboarded."
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The date and time of creation."
+        }
+    },
+    "required": ["id", "name", "buyerID", "buyerReference", "onboardingStatus", "createdAt"]
+}

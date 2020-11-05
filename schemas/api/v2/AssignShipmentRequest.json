@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "description": "Assign a shipment to a purchase order line item",
+    "properties": {
+        "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "shipmentID": {
+                        "type": "string",
+                        "maxLength": 5000,
+                        "description": "ID of the shipment."
+                    },
+                    "reference": {
+                        "$ref": "./InternalPurchaseOrderLineItemReference.json"
+                    }
+                },
+                "required": ["shipmentID", "reference"]
+            }
+        }
+    },
+    "required": ["items"]
+}

@@ -1,0 +1,28 @@
+{
+    "type": "string",
+    "enum": [
+        "transportType",
+        "price",
+        "shipment",
+        "trackingEvents.actualCargoReadyDate",
+        "trackingEvents.confirmedCargoReadyDate",
+        "trackingEvents.etdOrigin",
+        "trackingEvents.atdOrigin",
+        "trackingEvents.etaDestination",
+        "trackingEvents.ataDestination",
+        "trackingEvents.estimatedDeliveryDate",
+        "trackingEvents.actualDeliveryDate",
+        "plannedCargoReadyDate",
+        "confirmedCargoReadyDate",
+        "plannedDeliveryDate",
+        "originAddress",
+        "deliveryAddress",
+        "volumeCBM",
+        "weightKGM",
+        "packagedVolumeCBM",
+        "packagedWeightKGM",
+        "manufacturedQuantity",
+        "hsCodes",
+        "notes"
+    ]
+}

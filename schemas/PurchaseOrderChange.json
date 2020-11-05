@@ -1,0 +1,13 @@
+{
+    "oneOf": [
+        {
+            "$ref": "./PurchaseOrderCreation.json"
+        },
+        {
+            "$ref": "./PurchaseOrderUpdate.json"
+        }
+    ],
+    "discriminator": {
+        "propertyName": "type"
+    }
+}

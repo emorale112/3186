@@ -1,0 +1,5 @@
+{
+    "description": "Role owner of a custom field definition (who is responsible for creation / update of this field).",
+    "enum": ["internal", "external"],
+    "type": "string"
+}

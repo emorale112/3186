@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": ["partial"]
+        },
+        "result": {
+            "type": "number"
+        }
+    },
+    "required": ["type", "result"]
+}

@@ -1,0 +1,16 @@
+{
+    "description": "Booking which a line item belongs to.",
+    "type": "object",
+    "properties": {
+        "bookingID": {
+            "description": "The ID of the booking that this line item belongs to .",
+            "type": "string",
+            "maxLength": 5000
+        },
+        "bookedAt": {
+            "description": "The date when the line item was booked",
+            "type": "string",
+            "format": "date-time"
+        }
+    }
+}

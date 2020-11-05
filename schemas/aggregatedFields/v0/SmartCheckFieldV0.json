@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "description": "Check field",
+    "properties": {
+        "id": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "ID of the field."
+        },
+        "displayName": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Name of the field used on the platform."
+        },
+        "customerID": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Customer ID of the owner of the field."
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Creation date on the platform."
+        },
+        "field": {
+            "$ref": "./SmartCheckFieldReferenceV0.json"
+        },
+        "rules": {
+            "type": "array",
+            "items": {
+                "$ref": "./SmartCheckFieldRule.json"
+            }
+        },
+        "type": {
+            "$ref": "./SmartCheckFieldType.json"
+        }
+    },
+    "required": ["id", "displayName", "field", "rules"]
+}

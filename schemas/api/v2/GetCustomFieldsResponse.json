@@ -1,0 +1,13 @@
+{
+    "description": "The customers custom fields",
+    "type": "object",
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "$ref": "../../CustomField.json"
+            }
+        }
+    },
+    "required": ["items"]
+}

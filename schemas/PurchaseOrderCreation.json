@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "buyerReference": {
+            "$ref": "./PurchaseOrder.json#/properties/buyerReference"
+        },
+        "type": {
+            "type": "string",
+            "enum": ["purchaseOrderCreation"]
+        }
+    },
+    "required": ["buyerReference", "type"]
+}

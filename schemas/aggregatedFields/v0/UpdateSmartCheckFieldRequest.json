@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "displayName": {
+            "type": "string",
+            "maxLength": 5000
+        },
+        "field": {
+            "$ref": "./SmartCheckFieldReferenceV0.json"
+        },
+        "type": {
+            "$ref": "./SmartCheckFieldType.json"
+        },
+        "rules": {
+            "type": "array",
+            "items": {
+                "$ref": "./SmartCheckFieldRule.json"
+            }
+        }
+    },
+    "required": ["displayName", "field", "type", "rules"]
+}

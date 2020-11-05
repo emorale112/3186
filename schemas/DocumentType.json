@@ -1,0 +1,5 @@
+{
+    "type": "string",
+    "description": "Various documents are relevant during a purchase order's life cycle. The document type describes what kind of document has been uploaded.",
+    "enum": ["confirmation", "commercialInvoice", "packingList", "other"]
+}

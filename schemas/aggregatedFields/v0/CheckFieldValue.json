@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": ["check"]
+        },
+        "result": {
+            "$ref": "./Check.json"
+        }
+    },
+    "required": ["type", "result"]
+}

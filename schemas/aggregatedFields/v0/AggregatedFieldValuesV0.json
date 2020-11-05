@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "example": {
+        "AF1001": {
+            "type": "complete",
+            "result": 2000
+        },
+        "AF1002": {
+            "type": "partial",
+            "result": 1000
+        },
+        "AF1003": {
+            "type": "notApplicable"
+        }
+    },
+    "additionalProperties": {
+        "$ref": "./AggregatedFieldValueV0.json"
+    }
+}

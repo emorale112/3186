@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "description": "Customer specific fields. Custom fields allow the customer to extend the FortoX data model with additional meta data needed to implement their processes on the FortoX platform. The `key` is the field id (see custom fields documentation). The `value` is the value of the custom field.",
+    "example": { "CF1001": "string value", "CF1002": 1, "CF1003": true },
+    "additionalProperties": {
+        "anyOf": [
+            {
+                "type": "string",
+                "nullable": true
+            },
+            {
+                "type": "number",
+                "nullable": true
+            },
+            {
+                "type": "boolean",
+                "nullable": true
+            },
+            {
+                "type": "object",
+                "nullable": true
+            }
+        ]
+    }
+}

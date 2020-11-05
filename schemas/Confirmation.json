@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "userID": {
+            "type": "string",
+            "description": "User ID of the user who performed the confirmation."
+        },
+        "customerID": {
+            "type": "string",
+            "description": "Customer ID of the user who performed the confirmation."
+        },
+        "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the confirmation was last changed."
+        },
+        "status": {
+            "$ref": "./ConfirmationStatus.json"
+        }
+    },
+    "required": ["userID", "customerID", "updatedAt", "status"]
+}

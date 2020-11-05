@@ -1,0 +1,5 @@
+{
+    "enum": ["sea", "air", "seaAir", "rail", "truck"],
+    "type": "string",
+    "description": "Transport mode to use for shipping"
+}

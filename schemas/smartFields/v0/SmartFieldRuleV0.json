@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "condition": {
+            "$ref": "./SmartFieldRuleConditionV0.json"
+        },
+        "field": {
+            "$ref": "./PurchaseOrderLineItemFieldReferenceV0.json"
+        },
+        "value": {
+            "$ref": "./SmartFieldValueV0.json"
+        }
+    },
+    "required": ["condition", "field", "value"]
+}

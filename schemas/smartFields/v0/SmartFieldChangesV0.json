@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "description": "Smart field changes",
+    "properties": {
+        "defaultValue": {
+            "$ref": "./SmartFieldValueV0.json"
+        },
+        "displayName": {
+            "type": "string"
+        },
+        "rules": {
+            "type": "array",
+            "items": {
+                "$ref": "./SmartFieldRuleV0.json"
+            }
+        },
+        "version": {
+            "$ref": "./SmartFieldVersionV0.json"
+        }
+    },
+    "required": ["version"]
+}

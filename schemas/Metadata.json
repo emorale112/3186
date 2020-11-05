@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "permissions": {
+            "description": "Each permission is a string divided into two parts separated by a `/`. The allowed operation e.g update and the path to the affected field e.g $.items[*].customFields.CF10004",
+            "example": ["update/$.items[*].customFields.CF10004"],
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

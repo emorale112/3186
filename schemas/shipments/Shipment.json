@@ -1,0 +1,78 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "ID of the shipment."
+        },
+        "lineItems": {
+            "type": "array",
+            "items": {
+                "$ref": "./ShipmentLineItem.json"
+            },
+            "description": "Line items shipped with the shipment."
+        },
+        "billOfLadingNumber": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Number of the bill of lading (B/L) issued by the carrier acknowledging receipt of cargo for the shipment."
+        },
+        "forwarderReference": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Reference used by the forwarder to identify the shipment."
+        },
+        "forwarderLink": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Link to the shipment on the forwarder's platform."
+        },
+        "voyageNumber": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Number of the voyage."
+        },
+        "carrier": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "maxLength": 5000,
+                    "description": "ID of the carrier."
+                },
+                "name": {
+                    "type": "string",
+                    "maxLength": 5000,
+                    "description": "Name of the carrier."
+                }
+            }
+        },
+        "vessel": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "maxLength": 5000
+                }
+            }
+        },
+        "transportMode": { "$ref": "../TransportMode.json" },
+        "transportType": { "$ref": "../TransportType.json" },
+        "incoterm": { "$ref": "../ISOIncotermCode.json" },
+        "originAddress": { "$ref": "../PurchaseOrderLineItem.json#/properties/originAddress" },
+        "deliveryAddress": { "$ref": "../PurchaseOrderLineItem.json#/properties/deliveryAddress" },
+        "portOfLoading": { "$ref": "../PurchaseOrderLineItem.json#/properties/portOfLoading" },
+        "portOfDestination": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "The standard UN code for the port where the goods are going to be loaded off the means of transportation. (Airport, Harbour or Train station)"
+        },
+        "estimatedCargoReadyDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Cargo ready date that is advised by the forwarder. It can be based on an agreement between the forwarder, agent, seller and buyer."
+        },
+        "plannedDeliveryDate": { "$ref": "../PurchaseOrderLineItem.json#/properties/plannedDeliveryDate" }
+    },
+    "required": ["lineItems", "forwarderReference"]
+}

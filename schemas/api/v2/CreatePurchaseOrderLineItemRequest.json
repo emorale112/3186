@@ -1,0 +1,95 @@
+{
+    "type": "object",
+    "description": "Create a purchase order item in purchase order request.",
+    "properties": {
+        "lineItemNumber": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/lineItemNumber"
+        },
+        "incoterm": {
+            "$ref": "../../ISOIncotermCode.json"
+        },
+        "transportMode": {
+            "$ref": "../../TransportMode.json"
+        },
+        "transportType": {
+            "$ref": "../../TransportType.json"
+        },
+        "price": {
+            "$ref": "../../Money.json"
+        },
+        "plannedCargoReadyDate": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/plannedCargoReadyDate"
+        },
+        "plannedDeliveryDate": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/plannedDeliveryDate"
+        },
+        "originAddress": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/originAddress"
+        },
+        "deliveryAddress": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/deliveryAddress"
+        },
+        "portOfLoading": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/portOfLoading"
+        },
+        "volumeCBM": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/volumeCBM"
+        },
+        "weightKGM": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/weightKGM"
+        },
+        "packagedVolumeCBM": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/packagedVolumeCBM"
+        },
+        "packagedWeightKGM": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/packagedWeightKGM"
+        },
+        "orderedQuantity": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/orderedQuantity"
+        },
+        "manufacturedQuantity": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/manufacturedQuantity"
+        },
+        "buyerProductID": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/buyerProductID"
+        },
+        "productSKU": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/productSKU"
+        },
+        "productDescription": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/productDescription"
+        },
+        "hsCodes": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/hsCodes"
+        },
+        "notes": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/notes"
+        },
+        "status": {
+            "type": "string",
+            "enum": ["open", "cancelled"],
+            "description": "The current status of the line item. The customer can send cancelled line items if they want to see them in the FortoX platform."
+        },
+        "customFields": {
+            "$ref": "../../CustomerCustomFields.json"
+        },
+        "passedQualityAssurance": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/passedQualityAssurance"
+        },
+        "qualityControlStatus": {
+            "$ref": "../../PurchaseOrderLineItemQualityControlStatus.json"
+        }
+    },
+    "required": [
+        "lineItemNumber",
+        "incoterm",
+        "transportMode",
+        "plannedCargoReadyDate",
+        "portOfLoading",
+        "productSKU",
+        "orderedQuantity",
+        "buyerProductID",
+        "productDescription",
+        "hsCodes"
+    ]
+}

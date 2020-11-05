@@ -1,0 +1,13 @@
+{
+    "description": "The customer smart fields",
+    "type": "object",
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "$ref": "./SmartFieldV0.json"
+            }
+        }
+    },
+    "required": ["items"]
+}

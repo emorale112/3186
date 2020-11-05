@@ -1,0 +1,6 @@
+{
+    "type": "string",
+    "title": "CargoReadyDateCheck",
+    "description": "The cargo ready check is an indicator for how close the actual cargo ready date is to the planned cargo ready date.",
+    "enum": ["pending", "passed", "warning", "failed"]
+}

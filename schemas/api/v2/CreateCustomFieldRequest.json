@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "description": "Custom fields created by customers.",
+    "properties": {
+        "sourceFieldName": {
+            "description": "Field name from the customer definition. Must be unique across all custom fields.",
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1
+        },
+        "displayName": {
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1,
+            "description": "Label to be used as interface with the customer for this field."
+        },
+        "source": {
+            "$ref": "../../CustomFieldSource.json"
+        },
+        "level": {
+            "$ref": "../../CustomFieldLevel.json"
+        },
+        "definition": {
+            "$ref": "../../CustomFieldDefinition.json"
+        }
+    },
+    "required": ["sourceFieldName", "displayName", "source", "level", "definition"]
+}

@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "description": "Buyer reference to a purchase order line item.",
+    "properties": {
+        "lineItemNumber": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/lineItemNumber"
+        },
+        "buyerReference": {
+            "$ref": "../../PurchaseOrder.json#/properties/buyerReference"
+        }
+    },
+    "required": ["lineItemNumber", "buyerReference"],
+    "additionalProperties": false
+}

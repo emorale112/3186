@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "lineItemNumber": {
+            "$ref": "./PurchaseOrderLineItem.json#/properties/lineItemNumber"
+        },
+        "type": {
+            "type": "string",
+            "enum": ["purchaseOrderLineItemCancellation"]
+        }
+    },
+    "required": ["lineItemNumber", "type"]
+}

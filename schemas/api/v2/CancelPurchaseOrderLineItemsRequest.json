@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "Cancel purchase order items",
+    "properties": {
+        "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": ["reference"],
+                "properties": {
+                    "reference": {
+                        "$ref": "./PurchaseOrderLineItemReference.json"
+                    }
+                }
+            },
+            "description": "An array of line items to be cancelled."
+        }
+    },
+    "required": ["items"]
+}

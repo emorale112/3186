@@ -1,0 +1,16 @@
+{
+    "oneOf": [
+        {
+            "$ref": "./UpdateSmartCheckFieldRequest.json"
+        },
+        {
+            "$ref": "./UpdateCustomCheckFieldRequest.json"
+        },
+        {
+            "$ref": "./UpdateSumFieldRequest.json"
+        }
+    ],
+    "discriminator": {
+        "propertyName": "type"
+    }
+}

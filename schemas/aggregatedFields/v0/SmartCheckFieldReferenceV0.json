@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": ["smart"]
+        },
+        "smartFieldID": {
+            "type": "string"
+        }
+    },
+    "required": ["type", "smartFieldID"]
+}

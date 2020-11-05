@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "description": "Unassign shipment from purchase order line item(s).",
+    "properties": {
+        "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "reference": {
+                        "$ref": "./InternalPurchaseOrderLineItemReference.json"
+                    }
+                },
+                "required": ["reference"]
+            },
+            "description": "An array of line items to be unassigned."
+        }
+    },
+    "required": ["items"]
+}

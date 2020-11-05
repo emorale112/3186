@@ -1,0 +1,168 @@
+{
+    "$schema": "https://raw.githubusercontent.com/freight-hub/api-standards/master/v1/schema/json/draft-04/error_catalog.json",
+    "namespace": "com.freighthub.pom",
+    "language": "en",
+    "errors": [
+        {
+            "error_spec": {
+                "name": "UNAUTHORIZED",
+                "message": "The request requires authentication and none was provided.",
+                "http_status_codes": [401]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "FORBIDDEN",
+                "message": "The client is not authorized to access the resource, although it may have valid credentials. The API could use this code in case business level authorization fails.",
+                "http_status_codes": [403]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "NOT_ACCEPTABLE",
+                "message": "The server cannot return the payload of the response using the media type requested by the client. For example, if the client sends an Accept: application/xml header, and the API can only generate application/json.",
+                "http_status_codes": [406]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "RESOURCE_NOT_FOUND",
+                "message": "Resource not found.",
+                "http_status_codes": [404]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "BAD_REQUEST",
+                "message": "The request content did not match the expected schema.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "SERVER_ERROR",
+                "message": "An unexpected server error occurred.",
+                "http_status_codes": [500]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "UNSUPPORTED_MEDIA_TYPE",
+                "message": "The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method.",
+                "http_status_codes": [415]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "PURCHASE_ORDER_UNEXPECTED_STATE",
+                "message": "The purchase order's state was incompatible with the operation you were trying to perform.",
+                "http_status_codes": [422]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "INCONSISTENT_PRODUCT_DETAILS",
+                "message": "The operation was not executed because multiple line items with same SKU have different product details.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "CUSTOM_FIELD_NOT_UNIQUE",
+                "message": "A custom field must be uniquely identifier by the source field name.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "NOT_ENOUGH_ITEMS_TO_SHIP",
+                "message": "There are not enough available items to associate with the shipment.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "DUPLICATE_LINE_ITEM_NUMBER",
+                "message": "A purchase order cannot have multiple line items with the same line item number.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "SUPPLIER_CANNOT_BE_SELF",
+                "message": "A supplier for an account cannot be the account itself.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "INCOMPLETE_LINE_ITEM",
+                "message": "A line item referenced in the request does not exist or is cancelled and an attempt to create a new line item failed because required information was missing.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "SUM_FIELD_INVALID_TYPE_REFERENCE",
+                "message": "A sum field can only reference a numeric field.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "INVALID_CUSTOM_FIELD_ID",
+                "message": "A custom field with the provided ID could not be found.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "INVALID_SMART_FIELD_ID",
+                "message": "A smart field with the provided ID could not be found.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "APPROVAL_FIELD_INVALID_TYPE_REFERENCE",
+                "message": "An aggregated approval field can only reference an approval field.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "AGGREGATED_FIELD_TYPE_CHANGE_FORBIDDEN",
+                "message": "An aggregated field can not change the type.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "BOOKING_INVALID_PURCHASE_ORDER",
+                "message": "Booking and purchase order does not belong to same customer.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "BOOKING_INVALID_SUPPLIER",
+                "message": "Booking and purchase order does not belong to same supplier",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "SUPPLIER_CHANGE_FORBIDDEN",
+                "message": "A supplier cannot change after the purchase order has been created. Please create a new purchase order or get in touch with our customer support.",
+                "http_status_codes": [400]
+            }
+        },
+        {
+            "error_spec": {
+                "name": "LINE_ITEM_ALREADY_BOOKED",
+                "message": "Line item is already booked",
+                "http_status_codes": [400]
+            }
+        }
+    ]
+}

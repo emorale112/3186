@@ -1,0 +1,5 @@
+{
+    "type": "string",
+    "description": "A purchase order is created by a customer. The purchase order is then sent to the supplier. The supplier can then either confirm or reject the purchase order. As long as the supplier has not responded to the purchase order, the status is pending. A supplier can then either confirm or reject the purchase order.",
+    "enum": ["pending", "confirmed", "rejected"]
+}

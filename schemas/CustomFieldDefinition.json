@@ -1,0 +1,27 @@
+{
+    "description": "JSON Schema definition of the value type allowed on this field.",
+    "additionalProperties": true,
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "minLength": 1
+        },
+        "enum": {
+            "description": "the allowed values if the string type is restricted",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "string"
+            }
+        },
+        "format": {
+            "type": "string"
+        },
+        "nullable": {
+            "description": "nullability of the custom field value; defaults to true",
+            "type": "boolean"
+        }
+    },
+    "required": ["type"]
+}

@@ -1,0 +1,109 @@
+{
+    "type": "object",
+    "properties": {
+        "bookedAt": {
+            "description": "The date on which the line item was added to the booking.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "purchaseOrderID": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "ID of the purchase order the line item belongs to."
+        },
+        "buyerReference": {
+            "$ref": "../../PurchaseOrder.json#/properties/buyerReference"
+        },
+        "lineItemNumber": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/lineItemNumber"
+        },
+        "incoterm": {
+            "$ref": "../../ISOIncotermCode.json"
+        },
+        "transportMode": {
+            "$ref": "../../TransportMode.json"
+        },
+        "transportType": {
+            "$ref": "../../TransportType.json"
+        },
+        "plannedCargoReadyDate": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/plannedCargoReadyDate"
+        },
+        "plannedDeliveryDate": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/plannedDeliveryDate"
+        },
+        "supplierConfirmedCargoReadyDate": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/confirmedCargoReadyDate"
+        },
+        "confirmedCargoReadyDate": {
+            "$ref": "./TrackingEvent.json"
+        },
+        "etdOrigin": {
+            "$ref": "./TrackingEvent.json"
+        },
+        "etaDestination": {
+            "$ref": "./TrackingEvent.json"
+        },
+        "estimatedDeliveryDate": {
+            "$ref": "./TrackingEvent.json"
+        },
+        "originAddress": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/originAddress"
+        },
+        "deliveryAddress": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/deliveryAddress"
+        },
+        "portOfLoading": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/portOfLoading"
+        },
+        "volumeCBM": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/volumeCBM"
+        },
+        "weightKGM": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/weightKGM"
+        },
+        "packagedVolumeCBM": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/packagedVolumeCBM"
+        },
+        "packagedWeightKGM": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/packagedWeightKGM"
+        },
+        "orderedQuantity": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/orderedQuantity"
+        },
+        "manufacturedQuantity": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/manufacturedQuantity"
+        },
+        "bookedQuantity": {
+            "type": "number",
+            "description": "The quantity of the line item that has been added to the booking."
+        },
+        "buyerProductID": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/buyerProductID"
+        },
+        "productSKU": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/productSKU"
+        },
+        "productDescription": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/productDescription"
+        },
+        "hsCodes": {
+            "$ref": "../../PurchaseOrderLineItem.json#/properties/hsCodes"
+        }
+    },
+    "required": [
+        "bookedAt",
+        "purchaseOrderID",
+        "buyerReference",
+        "lineItemNumber",
+        "incoterm",
+        "transportMode",
+        "portOfLoading",
+        "productSKU",
+        "orderedQuantity",
+        "buyerProductID",
+        "productDescription",
+        "hsCodes",
+        "bookedQuantity"
+    ]
+}

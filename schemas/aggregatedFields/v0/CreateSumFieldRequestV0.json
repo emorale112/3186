@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "displayName": {
+            "type": "string"
+        },
+        "field": {
+            "$ref": "./SumFieldReferenceV0.json"
+        },
+        "type": {
+            "$ref": "./SumFieldType.json"
+        }
+    },
+    "required": ["displayName", "field", "type"]
+}

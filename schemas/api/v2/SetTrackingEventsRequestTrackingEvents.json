@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "description": "List of departure and arrival times to increase visibility for customers.",
+    "properties": {
+        "actualCargoReadyDate": {
+            "$ref": "./SetTrackingEventsRequestTrackingEventsTrackingEvent.json"
+        },
+        "confirmedCargoReadyDate": {
+            "$ref": "./SetTrackingEventsRequestTrackingEventsTrackingEvent.json"
+        },
+        "etdOrigin": {
+            "$ref": "./SetTrackingEventsRequestTrackingEventsTrackingEvent.json"
+        },
+        "atdOrigin": {
+            "$ref": "./SetTrackingEventsRequestTrackingEventsTrackingEvent.json"
+        },
+        "etaDestination": {
+            "$ref": "./SetTrackingEventsRequestTrackingEventsTrackingEvent.json"
+        },
+        "ataDestination": {
+            "$ref": "./SetTrackingEventsRequestTrackingEventsTrackingEvent.json"
+        },
+        "estimatedDeliveryDate": {
+            "$ref": "./SetTrackingEventsRequestTrackingEventsTrackingEvent.json"
+        },
+        "actualDeliveryDate": {
+            "$ref": "./SetTrackingEventsRequestTrackingEventsTrackingEvent.json"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+{
+    "enum": ["fcl", "lcl"],
+    "type": "string",
+    "description": "FCL means Full Container Load, LCL means Less than Container Load. This is information that can be used in the transport planning process and indicates how the goods are preferred to be shipped."
+}

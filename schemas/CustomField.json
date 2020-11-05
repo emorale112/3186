@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "description": "Custom fields created by customers.",
+    "properties": {
+        "id": {
+            "description": "Generated on insertion",
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1
+        },
+        "sourceFieldName": {
+            "description": "Field name from the customer definition.",
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1
+        },
+        "displayName": {
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1,
+            "description": "Label to be used as interface with the customer for this field."
+        },
+        "source": {
+            "$ref": "./CustomFieldSource.json"
+        },
+        "level": {
+            "$ref": "./CustomFieldLevel.json"
+        },
+        "definition": {
+            "$ref": "./CustomFieldDefinition.json"
+        }
+    },
+    "required": ["id", "sourceFieldName", "displayName", "source", "level", "definition"]
+}

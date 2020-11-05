@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "properties": {
+                    "reference": {
+                        "oneOf": [
+                            {
+                                "$ref": "./InternalPurchaseOrderLineItemReference.json"
+                            },
+                            {
+                                "$ref": "./ShipmentPurchaseOrderLineItemsReference.json"
+                            }
+                        ]
+                    },
+                    "events": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "$ref": "./SetTrackingEventsRequestTrackingEvents.json"
+                        }
+                    }
+                },
+                "required": ["reference", "events"]
+            }
+        }
+    },
+    "required": ["items"]
+}

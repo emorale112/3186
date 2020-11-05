@@ -1,0 +1,161 @@
+{
+    "type": "object",
+    "description": "Line item in a purchase order.",
+    "properties": {
+        "lineItemNumber": {
+            "description": "Line item number of this purchase order item. This is a unique identifier within the purchase order.",
+            "type": "string",
+            "maxLength": 5000
+        },
+        "booking": {
+            "$ref": "./LineItemBooking.json"
+        },
+        "incoterm": {
+            "$ref": "./ISOIncotermCode.json"
+        },
+        "transportMode": {
+            "$ref": "./TransportMode.json"
+        },
+        "transportType": {
+            "$ref": "./TransportType.json"
+        },
+        "price": {
+            "$ref": "./Money.json"
+        },
+        "shipment": {
+            "$ref": "./LineItemShipment.json"
+        },
+        "trackingEvents": {
+            "type": "array",
+            "items": {
+                "$ref": "./api/v2/TrackingEvents.json"
+            }
+        },
+        "plannedCargoReadyDate": {
+            "description": "Initial cargo ready date that has been planned by the buyer and eventually agreed between buyer and seller. It describes when the goods should be ready to be shipped at the supplier's factory.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "plannedDeliveryDate": {
+            "description": "Initial delivery date provided by the buyer which describes when the buyer should ideally receive the goods at the designated delivery location.",
+            "type": "string",
+            "format": "date-time"
+        },
+        "confirmedCargoReadyDate": {
+            "description": "The cargo ready date that has been confirmed by the seller. (The seller can only fill in this field one time - amendments need to be done by the forwarder)",
+            "type": "string",
+            "format": "date-time"
+        },
+        "originAddress": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Address from where the goods are being shipped. The preferred format is street, city, county, country."
+        },
+        "deliveryAddress": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Address the goods will be shipped to. The preferred format is street, city, county, country."
+        },
+        "portOfLoading": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "The standard UN code for the port where the goods are going to be loaded onto the means of transportation. (Airport, Harbour or Train station)"
+        },
+        "volumeCBM": {
+            "type": "number",
+            "description": "Expected net volume of the goods in cubic meters."
+        },
+        "weightKGM": {
+            "type": "number",
+            "description": "Expected net weight of the goods in kilograms."
+        },
+        "packagedVolumeCBM": {
+            "type": "number",
+            "description": "Expected packaged (gross) volume of the goods in cubic meters."
+        },
+        "packagedWeightKGM": {
+            "type": "number",
+            "description": "Expected packaged (gross) weight of the goods in kilograms."
+        },
+        "orderedQuantity": {
+            "type": "number",
+            "description": "Initial quantity of goods that has been ordered by the buyer and eventually agreed between buyer and seller."
+        },
+        "manufacturedQuantity": {
+            "type": "number",
+            "description": "Quantity of goods that has been produced by the seller for the buyer. It is also used to check the deviation by comparing this with \"ordered quantity\". If the deviation is higher than agreed the customer will be informed about the deviation."
+        },
+        "bookedQuantity": {
+            "type": "number",
+            "description": "Quantity that has been booked from the seller. Currently this is based on the \"manufactured quantity\". If this is not filled it is equal to \"ordered quantity\"."
+        },
+        "shippedQuantity": {
+            "type": "number",
+            "description": "Quantity that was physically loaded and left origin. Based on the \"booked quantity\"."
+        },
+        "deliveredQuantity": {
+            "type": "number",
+            "description": "Quantity delivered to the warehouse. Will be filled in automatically when the \"Actual Delivery Date\" is set and is based on the \"booked quantity\"."
+        },
+        "buyerProductID": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "The buyer's product ID for the product in the line item. It should not change over the lifetime of the product."
+        },
+        "productSKU": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "The Stock Keeping Unit of the goods - an identifier for the specific product unit ordered. This can be the same as the product ID if no other differentiation is made."
+        },
+        "productDescription": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "A description of the product."
+        },
+        "hsCodes": {
+            "type": "array",
+            "description": "The HS codes (Harmonized System codes) used for the customs process. They describe what product category the ordered product belongs to.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "notes": {
+            "type": "string",
+            "maxLength": 5000,
+            "description": "Additional notes provided by the buyer."
+        },
+        "status": {
+            "$ref": "./PurchaseOrderStatus.json"
+        },
+        "customFields": {
+            "$ref": "./CustomerCustomFields.json"
+        },
+        "smartFields": {
+            "$ref": "./smartFields/v0/SmartFieldValuesV0.json"
+        },
+        "passedQualityAssurance": {
+            "type": "boolean",
+            "description": "The line item passed quality assurance.",
+            "deprecated": true
+        },
+        "qualityControlStatus": {
+            "$ref": "./PurchaseOrderLineItemQualityControlStatus.json"
+        },
+        "cargoReadyDateCheck": {
+            "$ref": "./CargoReadyDateCheck.json"
+        }
+    },
+    "required": [
+        "lineItemNumber",
+        "incoterm",
+        "transportMode",
+        "portOfLoading",
+        "productSKU",
+        "orderedQuantity",
+        "buyerProductID",
+        "productDescription",
+        "hsCodes",
+        "customFields",
+        "trackingEvents"
+    ]
+}

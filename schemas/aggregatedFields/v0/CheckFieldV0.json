@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "description": "Check field",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "displayName": {
+            "type": "string"
+        },
+        "field": {
+            "$ref": "./CheckFieldReferenceV0.json"
+        },
+        "type": {
+            "$ref": "./CheckFieldType.json"
+        }
+    },
+    "required": ["id", "displayName", "version", "field"]
+}

@@ -1,0 +1,4 @@
+{
+    "enum": ["purchaseOrder", "lineItem"],
+    "type": "string"
+}

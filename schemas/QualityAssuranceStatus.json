@@ -1,0 +1,5 @@
+{
+    "description": "Status of the quality assurance process.",
+    "type": "string",
+    "enum": ["pending", "passed", "failed", "partiallyPassed"]
+}

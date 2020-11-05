@@ -1,0 +1,5 @@
+{
+    "type": "string",
+    "description": "The quality control status of the line item.",
+    "enum": ["pending", "passed", "failed", "notApplicable"]
+}

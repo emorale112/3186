@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "sourceFieldName": {
+            "description": "Field name from the customer definition.",
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1
+        },
+        "displayName": {
+            "description": "Label to be used as interface with the customer for this field.",
+            "type": "string",
+            "maxLength": 5000,
+            "minLength": 1
+        },
+        "source": {
+            "$ref": "./CustomFieldSource.json"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "billOfLadingNumber": { "$ref": "./Shipment.json#/properties/billOfLadingNumber" },
+        "forwarderLink": { "$ref": "./Shipment.json#/properties/forwarderLink" },
+        "voyageNumber": { "$ref": "./Shipment.json#/properties/voyageNumber" },
+        "carrier": { "$ref": "./Shipment.json#/properties/carrier" },
+        "vessel": { "$ref": "./Shipment.json#/properties/vessel" }
+    }
+}

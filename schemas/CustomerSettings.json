@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "enableUpload": {
+            "type": "boolean",
+            "description": "Disables/Enables the import feature in the UI. This can be deactivated if a customer uses the API or has a Forto provided integration to prevent data inconsistencies."
+        },
+        "enableCancellation": {
+            "type": "boolean",
+            "description": "Disables/Enables the cancellation feature in the UI. This can be deactivated if a customer uses the API or has a Forto provided integration to prevent data inconsistencies."
+        }
+    },
+    "required": ["enableUpload", "enableCancellation"]
+}

@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "required": ["items"],
+    "description": "Estimated changes to purchase order.",
+    "properties": {
+        "totalIssuesInInvalidRows": {
+            "type": "number",
+            "description": "The number of issues in the invalid rows."
+        },
+        "totalIssues": {
+            "type": "number",
+            "description": "The total number of issues in the file."
+        },
+        "invalidRows": {
+            "description": "Rows with issues in the file. This may return a subset of all rows with issues in the file.",
+            "type": "array",
+            "items": {
+                "$ref": "./PreviewChangesInvalidRow.json"
+            }
+        }
+    }
+}

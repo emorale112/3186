@@ -1,0 +1,16 @@
+{
+    "oneOf": [
+        {
+            "$ref": "./PurchaseOrderLineItemCreation.json"
+        },
+        {
+            "$ref": "./PurchaseOrderLineItemCancellation.json"
+        },
+        {
+            "$ref": "./PurchaseOrderLineItemUpdate.json"
+        }
+    ],
+    "discriminator": {
+        "propertyName": "type"
+    }
+}

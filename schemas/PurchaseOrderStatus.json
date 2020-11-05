@@ -1,0 +1,5 @@
+{
+    "description": "New purchase order will have the status \"open\"",
+    "enum": ["open", "inProgress", "cancelled", "completed"],
+    "type": "string"
+}

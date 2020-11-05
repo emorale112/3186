@@ -1,0 +1,28 @@
+{
+    "description": "Create a new purchase order.",
+    "properties": {
+        "buyerID": {
+            "$ref": "../../PurchaseOrder.json#/properties/buyerID"
+        },
+        "supplier": {
+            "$ref": "../../PurchaseOrderSupplier.json"
+        },
+        "orderedAt": {
+            "$ref": "../../PurchaseOrder.json#/properties/orderedAt"
+        },
+        "buyerReference": {
+            "$ref": "../../PurchaseOrder.json#/properties/buyerReference"
+        },
+        "lineItems": {
+            "type": "array",
+            "items": {
+                "$ref": "./CreatePurchaseOrderLineItemRequest.json"
+            }
+        },
+        "customFields": {
+            "$ref": "../../CustomerCustomFields.json"
+        }
+    },
+    "type": "object",
+    "required": ["buyerID", "supplier", "buyerReference", "lineItems"]
+}

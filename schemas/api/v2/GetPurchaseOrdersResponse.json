@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "description": "List of purchase orders.",
+    "properties": {
+        "items": {
+            "type": "array",
+            "items": {
+                "$ref": "../../PurchaseOrder.json"
+            }
+        },
+        "totalItems": {
+            "type": "number"
+        }
+    },
+    "required": ["items", "totalItems"]
+}

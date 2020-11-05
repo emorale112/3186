@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "buyerID": {
+            "$ref": "./PurchaseOrder.json#/properties/buyerID"
+        },
+        "buyerReference": {
+            "$ref": "./PurchaseOrder.json#/properties/buyerReference"
+        }
+    },
+    "required": ["buyerID", "buyerReference"]
+}

@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "example": {
+        "SF1001": "passed"
+    },
+    "additionalProperties": {
+        "$ref": "./SmartFieldValueV0.json"
+    }
+}
