@@ -1,16 +1,18 @@
 {
-    "type": "object",
-    "description": "List of purchase orders.",
-    "properties": {
-        "items": {
-            "type": "array",
-            "items": {
-                "$ref": "../../PurchaseOrder.json"
-            }
-        },
-        "totalItems": {
-            "type": "number"
-        }
+  "type": "object",
+  "description": "List of purchase orders.",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "../../PurchaseOrder.json"
+      }
     },
-    "required": ["items", "totalItems"]
+    "totalItems": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "items"
+  ]
 }
