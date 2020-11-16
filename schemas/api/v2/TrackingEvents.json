@@ -1,30 +1,30 @@
 {
-    "type": "object",
-    "description": "List of departure and arrival times to increase visibility for customers.",
-    "properties": {
-        "actualCargoReadyDate": {
-            "$ref": "./TrackingEvent.json"
-        },
-        "confirmedCargoReadyDate": {
-            "$ref": "./TrackingEvent.json"
-        },
-        "etdOrigin": {
-            "$ref": "./TrackingEvent.json"
-        },
-        "atdOrigin": {
-            "$ref": "./TrackingEvent.json"
-        },
-        "etaDestination": {
-            "$ref": "./TrackingEvent.json"
-        },
-        "ataDestination": {
-            "$ref": "./TrackingEvent.json"
-        },
-        "estimatedDeliveryDate": {
-            "$ref": "./TrackingEvent.json"
-        },
-        "actualDeliveryDate": {
-            "$ref": "./TrackingEvent.json"
-        }
+  "type": "object",
+  "description": "List of departure and arrival times to increase visibility for customers.",
+  "properties": {
+    "actualCargoReadyDate": {
+      "$ref": "./TrackingEvent.json"
+    },
+    "confirmedCargoReadyDate": {
+      "$ref": "./TrackingEvent.json"
+    },
+    "etdOrigin": {
+      "$ref": "./TrackingEvents.json"
+    },
+    "atdOrigin": {
+      "$ref": "./TrackingEvent.json"
+    },
+    "etaDestination": {
+      "$ref": "./TrackingEvent.json"
+    },
+    "ataDestination": {
+      "$ref": "./TrackingEvent.json"
+    },
+    "estimatedDeliveryDate": {
+      "$ref": "./TrackingEvent.json"
+    },
+    "actualDeliveryDate": {
+      "$ref": "./TrackingEvent.json"
     }
+  }
 }
