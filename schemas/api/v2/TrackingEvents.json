@@ -9,7 +9,7 @@
       "$ref": "./TrackingEvent.json"
     },
     "etdOrigin": {
-      "$ref": "./TrackingEvents.json"
+      "$ref": "./TrackingEvent.json"
     },
     "atdOrigin": {
       "$ref": "./TrackingEvent.json"
