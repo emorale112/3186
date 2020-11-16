@@ -1,6 +1,7 @@
 {
   "type": "object",
   "description": "List of departure and arrival times to increase visibility for customers.",
+  "additionalProperties": false,
   "properties": {
     "actualCargoReadyDate": {
       "$ref": "./TrackingEvent.json"
